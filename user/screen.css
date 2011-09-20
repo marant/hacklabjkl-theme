@@ -1,0 +1,197 @@
+/* en: Place for user defined CSS rules (screen media) - this file can safely be
+   preserved when updating. See README for details.
+   
+   de: Ort für benutzerdefinierte CSS-Regeln (screen media) - Diese Datei kann
+   beim Durchführen von Updates ohne Risiko beibehalten werden. Konsultieren Sie
+   die README für Detailinformationen. */
+
+body, html {
+	background-color: #202020;
+	color: __text__;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	color: __text_neu__ !important;
+}
+
+tr, th, td
+{
+	color: __text__;
+}
+
+a
+{
+  color: __text_neu__ !important;
+}
+
+a:hover
+{
+  color: #8ab065 !important; 
+}
+
+/*
+div.dokuwiki a.wikilink1 :link{
+  color: __border__ !important;
+}
+*/
+
+a.wikilink2 :hover {
+  color: gray !important;
+}
+
+a.wikilink2 :link, a.wikilink2:visited {
+  color: gray !important;
+}
+
+div.dokuwiki a.wikilink1:visited, a.wikilink1 { 
+  color: __border__ !important;
+}
+
+div.dokuwiki a.wikilink1:hover { 
+  color: __border__ !important; 
+}
+
+dt, pre, code, pre .code
+{
+	color: black;
+	background-color: #3c3c3c !important;
+}
+
+acronym
+{
+	color: gray;
+}
+
+.selected
+{
+	background-color: __background__ !important;
+}
+
+/*
+ * IDs 
+ */
+#globalwrapper {
+	background-color: #202020;
+}
+
+#column-content{
+	background-color: #202020;
+	color: __text__;
+}
+
+#content {
+	background-color: __background__ !important; 
+	color: __text__;
+	border: 1px solid __border__;
+}
+
+#column-one
+{
+	color: __text__;
+	background-color: #202020;
+}
+
+#footer
+{
+	background-color:  __background__;
+}
+
+
+#column-content
+{
+	background-color: #202020; 
+}
+
+#p-search
+{
+	background-color: #202020 !important;
+}
+
+#p-cactions ul li a
+{
+	background-color: #3c3c3c !important;
+	border: 1px solid __border__;
+	border-bottom: 0px;
+}
+
+#p-cactions ul li a:hover
+{
+	background-color: __background__ !important;
+}
+
+#qsearch__in
+{
+	color: white ;
+	border: 1px solid __border__;
+	margin: 5px;
+	background-color: gray;
+}
+
+/*
+ * Classes
+ */
+
+
+input
+{
+	color: white ;
+	border: 1px solid __border__;
+	margin: 5px;
+	background-color: gray !important;
+	background-image: none !important;
+
+}
+.searchButton {
+	background-color: #3c3c3c !important;
+	color: white;
+	border: 1px solid __border__;
+}
+
+
+.mediawiki
+{
+	background-color: #202020 !important;
+	color: __text__;
+}
+
+.visualClear
+{
+	background-color: #202020;
+}
+.dokuwiki
+{
+	background-color: __background__;
+}
+
+.pBody
+{
+	color: __text__;
+	background-color:  #202020;
+	border: 0px;
+}
+
+.pBody .dokuwiki
+{
+	background-color:  #202020;
+}
+
+.pBody .dokuwiki .a
+{
+	color:  __color__ !important;
+}
+
+.portlet
+{
+	background-color:  #202020;
+}
+
+.toolbutton {
+	background-color: gray !important;
+	background-image: none !important;
+}
+
+
+
+
+
