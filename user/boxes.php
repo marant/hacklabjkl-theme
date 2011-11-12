@@ -32,13 +32,41 @@ if (!defined("DOKU_INC")){
 
 
 
+global $conf;
+global $ID;
+global $IDX;
+
+// partial copy from inc/html.php html_index()
+require_once(DOKU_INC.'inc/search.php');
+
+$ns = $IDX;
+$dir = $conf['datadir'];
+$ns  = cleanID($ns);
+if(empty($ns)){
+	$ns = dirname(str_replace(':','/',$ID));
+	if($ns == '.') $ns ='';
+}
+$ns  = utf8_encodeFN(str_replace(':','/',$ns));
+
+$data = array();
+search($data,$conf['datadir'],'search_index',array('ns' => $ns));
+$siteIndex  = '<div id="index__tree">';
+$siteIndex .= html_buildlist($data,'idx','html_list_index','html_li_index');
+$siteIndex .= '</div>';
+
+$indexBox = array("site_index" => array(
+	"headline" => "Navigation",
+	"xhtml" => $siteIndex
+));
+$_monobook_boxes = array_merge($indexBox, $_monobook_boxes);
 
 
 //examples: uncomment to see what is happening
-/*
-$_monobook_boxes["example1"]["headline"] = "Hello World!";
-$_monobook_boxes["example1"]["xhtml"] = "DokuWiki with monobook... <em>rules</em>!";
-*/
+
+
+#$_monobook_boxes["example1"]["headline"] = "Hello World!";
+#$_monobook_boxes["example1"]["xhtml"] = "DokuWiki with monobook... <em>rules</em>!";
+
 
 
 /*
